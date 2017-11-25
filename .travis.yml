@@ -11,7 +11,8 @@ before_install:
 
 before_script:
   - cp .env.test .env
-  - composer install --prefer-dist
+  - php artisan key:generate
+  - composer install
   - php artisan key:generate
 
 script:
