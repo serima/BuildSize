@@ -7,7 +7,7 @@ services:
   - mysql
 
 before_install:
-  - mysql -e 'CREATE DATABASE buildsize;'
+  - mysql -e 'CREATE DATABASE buildsize_test;'
 
 before_script:
   - cp .env.test .env
