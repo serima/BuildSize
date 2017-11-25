@@ -3,7 +3,9 @@ php:
   - '7.1'
 
 before_script:
+  - cp .env.example .env
   - composer install --prefer-dist
+  - php artisan key:generate
 
 script:
   - vendov/bin/phpunit
